@@ -1,6 +1,7 @@
 @-moz-document domain("imastodon.net")
   {
-/* 全体の背景色 */
+/* 背景色と文字色の設定 */
+/* 全体 */
 .ui{
     -webkit-background-size: 128px 128px;
     -moz-background-size: 128px 128px;
@@ -15,8 +16,7 @@
     opacity: 0.9;
     color: #dcece4 !important;
 }
-
-/* ヘッダーの背景色と文字色 */
+/* ヘッダー */
 .column-header,
 .column-header *,
 .getting-started__wrapper,
@@ -33,48 +33,25 @@
     background-color: #3e0d1d;
     color: #ffffff;
 }
-
-/* ボタンの背景色 */
-.status__content a,
-.status__content a>span,
-span.ellipsis,
-.active,
-.search__icon *{
-    color: #067193 !important;
-}
-.compose-form__buttons .active{
-    background-color: #282c37;
-}
-.button{
-    background-color: #a2051f;
-    opacity: 1;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: clip;
-}
-.button:hover{
-    background-color: #b11a33;
-    opacity: 0.8;
-}
-
-/* スタートカラムの背景色と文字色 */
+/* スタートカラム */
 .column-subheading,
 .getting-started__footer{
     background-color: #a2051f !important;
     color: #ffffff !important;
 }
-.column-link,
+.column-link{
+    background-color: #b92e4e !important;
+    color: #ffffff !important;
+}
 .static-content.getting-started,
 .static-content.getting-started p,
 .static-content.getting-started p a,
 .static-content.getting-started p span,
 .static-content.getting-started p span a{
-    background-color: #b92e4e !important;
-    color: #ffffff !important;
-    border-bottom: #ffffff !important;
+    background-color: #ff9790 !important;
+    color: #3e0d1d !important;
 }
-
-/* トゥートカラムの背景色と文字色 */
+/* トゥートカラム */
 .scrollable,
 .drawer__inner.darker,
 .search-results__section *,
@@ -91,6 +68,46 @@ span.ellipsis,
     background-color: #eff6f6;
     color: #2f0016;
 }
+/* ボタン */
+.status__content a,
+.status__content a>span,
+span.ellipsis,
+.active,
+.search__icon *{
+    color: #067193 !important;
+}
+.compose-form__buttons .active{
+    background-color: #282c37;
+}
+.button{
+    opacity: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+    display: inline-block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    border-radius: 4px;
+    color: #ffffff;
+    background-image: -webkit-linear-gradient(#1a83ad 0%, #13d6d7 100%);
+    background-image: linear-gradient(#1a83ad 0%, #13d6d7 100%);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+    border-bottom: solid 3px #0d7888;
+}
+.button:hover{
+    color: #2a1b0a;
+    background-image: -webkit-linear-gradient(#ffcb75 0%, #fff08f 100%);
+    background-image: linear-gradient(#ffcb75 0%, #fff08f 100%);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+    border-bottom: solid 3px #eba048;
+}
+.button:active{
+    -ms-transform: translateY(2px);
+    -webkit-transform: translateY(2px);
+    transform: translateY(2px);
+    box-shadow: 2px 0px 0px rgba(0, 0, 0, 0.2);
+    border-bottom: none;
+}
 
 /* 未収載トゥートの色分け */
 .status-unlisted{
@@ -98,37 +115,58 @@ span.ellipsis,
 }
 
 /* 角を丸くする */
+/* 全体 */
+.column .scrollable,
+.drawer__inner{
+    border-radius: 4px;    /* CSS3草案 */  
+    -webkit-border-radius: 4px;    /* Safari,Google Chrome用 */  
+    -moz-border-radius: 4px;    /* Firefox用 */
+}
+/* ヘッダーとボタン */
 .drawer__header,
 .drawer__tab,
-.drawer__inner,
-.favourite-tags,
 .column-header__wrapper,
 .column-header,
 .column-header__button,
 .column-header__buttons,
+.column-header__collapsible,
 .column-back-button{
-    border-radius: 10px;    /* CSS3草案 */  
-    -webkit-border-radius: 10px;    /* Safari,Google Chrome用 */  
-    -moz-border-radius: 10px;    /* Firefox用 */
+    border-radius: 8px;    /* CSS3草案 */  
+    -webkit-border-radius: 8px;    /* Safari,Google Chrome用 */  
+    -moz-border-radius: 8px;    /* Firefox用 */
 }
-.favourite-tags .compose__extra__header{
-    border-radius: 10px 10px 0 0;   /* CSS3草案 */  
-    -webkit-border-radius: 10px 10px 0 0;    /* Safari,Google Chrome用 */  
-    -moz-border-radius: 10px 10px 0 0;    /* Firefox用 */
+/* トゥートカラム */
+.compose__extra,
+.compose__extra__header{
+    border-radius: 0 4px 4px 0;   /* CSS3草案 */  
+    -webkit-border-radius: 0 4px 4px 0;    /* Safari,Google Chrome用 */  
+    -moz-border-radius: 0 4px 4px 0;    /* Firefox用 */
 }
-.favourite-tags__body,
-.favourite-tags__body li{
-    border-radius: 0 0 10px 10px;    /* CSS3草案 */  
-    -webkit-border-radius: 0 0 10px 10px;    /* Safari,Google Chrome用 */  
-    -moz-border-radius: 0 0 10px 10px;    /* Firefox用 */
+.compose__extra__header{
+    border-radius: 0 4px 0 0;   /* CSS3草案 */  
+    -webkit-border-radius: 0 4px 0 0;    /* Safari,Google Chrome用 */  
+    -moz-border-radius: 0 4px 0 0;    /* Firefox用 */
 }
-.scrollable{
-    border-radius: 10px;    /* CSS3草案 */  
-    -webkit-border-radius: 10px;    /* Safari,Google Chrome用 */  
-    -moz-border-radius: 10px;    /* Firefox用 */
+.compose__extra__body,
+.compose__extra__body li{
+    border-radius: 0 0 4px 0;   /* CSS3草案 */  
+    -webkit-border-radius: 0 0 4px 0;    /* Safari,Google Chrome用 */  
+    -moz-border-radius: 0 0 4px 0;    /* Firefox用 */
+}
+/* スタートカラム */
+.getting-started__wrapper{
+    border-radius: 4px;    /* CSS3草案 */  
+    -webkit-border-radius: 4px;    /* Safari,Google Chrome用 */  
+    -moz-border-radius: 4px;    /* Firefox用 */
+}
+.getting-started__footer.scrollable.optionally-scrollable{
+    border-radius: 4px 0 0 4px;    /* CSS3草案 */  
+    -webkit-border-radius: 4px 0 0 4px;    /* Safari,Google Chrome用 */  
+    -moz-border-radius: 4px 0 0 4px;    /* Firefox用 */
 }
 
-/* 全体のスクロールバーの設定 */
+/* スクロールバーの設定 */
+/* 全体 */
 ::-webkit-scrollbar,
 ::-webkit-scrollbar-track-piece{
     background: #dcece4;
@@ -148,28 +186,45 @@ span.ellipsis,
     border-radius: 4px;
     -webkit-border-radius: 4px;
 }
-
-/* スタートカラムのスクロールバーの設定 */
-.scrollable.optionally-scrollable::-webkit-scrollbar,
-.scrollable.optionally-scrollable::-webkit-scrollbar-track-piece{
-    background: #b92e4e;
+/* ヘッダー */
+.column-header__collapsible::-webkit-scrollbar,
+.column-header__collapsible::-webkit-scrollbar-track-piece{
+    background: #ffffff;
     border-radius: 4px;
     -webkit-border-radius: 4px;
 }
+.column-header__collapsible::-webkit-scrollbar:hover,
+.column-header__collapsible::-webkit-scrollbar-track-piece:hover{
+    background: #ffffff;
+}
+.column-header__collapsible::-webkit-scrollbar-thumb,
+.column-header__collapsible::-webkit-scrollbar-thumb:hover{
+    background: #3e0d1d;
+}
+.column-header__collapsible::-webkit-scrollbar-thumb,
+.column-header__collapsible::-webkit-scrollbar-track{
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+}
+/* スタートカラム */
+.scrollable.optionally-scrollable::-webkit-scrollbar,
+.scrollable.optionally-scrollable::-webkit-scrollbar-track-piece{
+    background: #ff9790;
+    border-radius: 0 4px 4px 0;
+    -webkit-border-radius: 0 4px 4px 0;
+}
 .scrollable.optionally-scrollable::-webkit-scrollbar:hover,
 .scrollable.optionally-scrollable::-webkit-scrollbar-track-piece:hover{
-    background: #b92e4e;
+    background: #ff9790;
 }
 .scrollable.optionally-scrollable::-webkit-scrollbar-thumb,
 .scrollable.optionally-scrollable::-webkit-scrollbar-thumb:hover{
-    background: #a2051f;
+    background: #b92e4e;
 }
-
-/* トゥートカラムのスクロールバーの設定 */
-/* トゥートカラムに常時スクロールバーを表示したくない場合は、直下の3行を削除してください */
-.drawer__pager .drawer__inner{
-    overflow-y: scroll;
-}
+/* トゥートカラム */
+.drawer__pager .drawer__inner{    /* スクロールバーを常時表示したくない場合はこの行全体を削除またはコメントアウトしてください */
+    overflow-y: scroll;    /* スクロールバーを常時表示したくない場合はこの行全体を削除またはコメントアウトしてください */
+}    /* スクロールバーを常時表示したくない場合はこの行全体を削除またはコメントアウトしてください */
 .drawer__pager .drawer__inner::-webkit-scrollbar,
 .drawer__pager .drawer__inner::-webkit-scrollbar-track-piece{
     background: #444b5d;
