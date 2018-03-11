@@ -46,7 +46,7 @@ span.ellipsis,
     background-color: #282c37;
 }
 .button{
-    background-color: #9b0016;
+    background-color: #a2051f;
     opacity: 1;
     white-space: nowrap;
     overflow: hidden;
@@ -57,7 +57,7 @@ span.ellipsis,
     opacity: 0.8;
 }
 
-/* スタートの背景色と文字色 */
+/* スタートカラムの背景色と文字色 */
 .column-subheading,
 .getting-started__footer{
     background-color: #a2051f !important;
@@ -74,7 +74,7 @@ span.ellipsis,
     border-bottom: #ffffff !important;
 }
 
-/* トゥートの背景色と文字色 */
+/* トゥートカラムの背景色と文字色 */
 .scrollable,
 .drawer__inner.darker,
 .search-results__section *,
@@ -105,7 +105,8 @@ span.ellipsis,
 .column-header__wrapper,
 .column-header,
 .column-header__button,
-.column-header__buttons{
+.column-header__buttons,
+.column-back-button{
     border-radius: 10px;    /* CSS3草案 */  
     -webkit-border-radius: 10px;    /* Safari,Google Chrome用 */  
     -moz-border-radius: 10px;    /* Firefox用 */
@@ -127,7 +128,7 @@ span.ellipsis,
     -moz-border-radius: 10px;    /* Firefox用 */
 }
 
-/* スクロールバーの設定 */
+/* 全体のスクロールバーの設定 */
 ::-webkit-scrollbar,
 ::-webkit-scrollbar-track-piece{
     background: #dcece4;
@@ -140,11 +141,47 @@ span.ellipsis,
 }
 ::-webkit-scrollbar-thumb,
 ::-webkit-scrollbar-thumb:hover{
-    background: #d77826;
+    background: #c49be4;
 }
 ::-webkit-scrollbar-thumb,
 ::-webkit-scrollbar-track{
     border-radius: 4px;
     -webkit-border-radius: 4px;
+}
+
+/* スタートカラムのスクロールバーの設定 */
+.scrollable.optionally-scrollable::-webkit-scrollbar,
+.scrollable.optionally-scrollable::-webkit-scrollbar-track-piece{
+    background: #b92e4e;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+}
+.scrollable.optionally-scrollable::-webkit-scrollbar:hover,
+.scrollable.optionally-scrollable::-webkit-scrollbar-track-piece:hover{
+    background: #b92e4e;
+}
+.scrollable.optionally-scrollable::-webkit-scrollbar-thumb,
+.scrollable.optionally-scrollable::-webkit-scrollbar-thumb:hover{
+    background: #a2051f;
+}
+
+/* トゥートカラムのスクロールバーの設定 */
+/* トゥートカラムに常時スクロールバーを表示したくない場合は、直下の3行を削除してください */
+.drawer__pager .drawer__inner{
+    overflow-y: scroll;
+}
+.drawer__pager .drawer__inner::-webkit-scrollbar,
+.drawer__pager .drawer__inner::-webkit-scrollbar-track-piece{
+    background: #444b5d;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+}
+.drawer__pager .drawer__inner::-webkit-scrollbar:hover,
+.drawer__pager .drawer__inner::-webkit-scrollbar-track-piece:hover{
+    background: #444b5d;
+}
+.drawer__pager .drawer__inner::-webkit-scrollbar-thumb,
+.drawer__pager .drawer__inner::-webkit-scrollbar-thumb:hover{
+    background: #313543;
 }
 }
