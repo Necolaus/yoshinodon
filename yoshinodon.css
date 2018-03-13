@@ -108,6 +108,9 @@ span.ellipsis,
     box-shadow: 2px 0px 0px rgba(0, 0, 0, 0.2);
     border-bottom: none;
 }
+.button span{
+    color: #ffffff;
+}
 
 /* 未収載トゥートの色分け */
 .status-unlisted{
