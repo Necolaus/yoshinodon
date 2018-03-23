@@ -108,8 +108,17 @@ span.ellipsis,
     box-shadow: 2px 0px 0px rgba(0, 0, 0, 0.2);
     border-bottom: none;
 }
-.button span{
+.button.confirmation-modal__cancel-button,
+.button.mute-modal__cancel-button{
     color: #ffffff;
+}
+.button.confirmation-modal__cancel-button:hover,
+.button.mute-modal__cancel-button:hover{
+    color: #2a1b0a;
+}
+.spoiler-button.spoiler-button--visible:hover,
+.icon-button.overlayed:hover{
+    background-color: #fff28a;
 }
 
 /* 未収載トゥートの色分け */
