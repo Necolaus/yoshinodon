@@ -219,18 +219,18 @@ span.ellipsis,
     -webkit-border-radius: 4px;
 }
 /* スタートカラム */
-.scrollable.optionally-scrollable::-webkit-scrollbar,
-.scrollable.optionally-scrollable::-webkit-scrollbar-track-piece{
+.getting-started__footer.scrollable.optionally-scrollable::-webkit-scrollbar,
+.getting-started__footer.scrollable.optionally-scrollable::-webkit-scrollbar-track-piece{
     background: #ff9790;
     border-radius: 0 4px 4px 0;
     -webkit-border-radius: 0 4px 4px 0;
 }
-.scrollable.optionally-scrollable::-webkit-scrollbar:hover,
-.scrollable.optionally-scrollable::-webkit-scrollbar-track-piece:hover{
+.getting-started__footer.scrollable.optionally-scrollable::-webkit-scrollbar:hover,
+.getting-started__footer.scrollable.optionally-scrollable::-webkit-scrollbar-track-piece:hover{
     background: #ff9790;
 }
-.scrollable.optionally-scrollable::-webkit-scrollbar-thumb,
-.scrollable.optionally-scrollable::-webkit-scrollbar-thumb:hover{
+.getting-started__footer.scrollable.optionally-scrollable::-webkit-scrollbar-thumb,
+.getting-started__footer.scrollable.optionally-scrollable::-webkit-scrollbar-thumb:hover{
     background: #b92e4e;
 }
 /* トゥートカラム */
@@ -250,5 +250,8 @@ span.ellipsis,
 .drawer__pager .drawer__inner::-webkit-scrollbar-thumb,
 .drawer__pager .drawer__inner::-webkit-scrollbar-thumb:hover{
     background: #313543;
+}
+.compose__extra .scrollable.optionally-scrollable{
+    overflow: hidden;
 }
 }
