@@ -251,7 +251,7 @@ span.ellipsis,
 .drawer__pager .drawer__inner::-webkit-scrollbar-thumb:hover{
     background: #313543;
 }
-.compose__extra .scrollable.optionally-scrollable{
-    overflow: hidden;
-}
+/* .compose__extra .scrollable.optionally-scrollable{ */
+/*     overflow: hidden; */
+/* } */
 }
