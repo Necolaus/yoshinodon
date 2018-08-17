@@ -1,4 +1,4 @@
-@-moz-document domain("imastodon.net")
+@-moz-document domain("imastodon.net"), domain("imastodon.org"), domain("imastodon.blue")
   {
 /* 背景色と文字色の設定 */
 /* 全体 */
@@ -183,6 +183,7 @@ span.ellipsis,
 ::-webkit-scrollbar-track-piece{
     background: #dcece4;
     border-radius: 4px;
+    width: 8px;
     -webkit-border-radius: 4px;
 }
 ::-webkit-scrollbar:hover,
