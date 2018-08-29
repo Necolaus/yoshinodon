@@ -6,15 +6,44 @@
     -webkit-background-size: 128px 128px;
     -moz-background-size: 128px 128px;
     background-size: 128px 128px;
-    background-color: #dcece4;
-    background-image: -webkit-gradient(linear, 0 0, 100% 0, color-stop(.5, #02a0c2), color-stop(.5, transparent), to(transparent));
-    background-image: -moz-linear-gradient(left, #02a0c2 50%, transparent 50%, transparent);
-    background-image: -o-linear-gradient(left, #02a0c2 50%, transparent 50%, transparent);
-    background-image: linear-gradient(left, #02a0c2 50%, transparent 50%, transparent);
+    background-color: #fffbe7;
+    background-image: -webkit-gradient(linear, 0 0, 100% 0, color-stop(.5, #08bec6), color-stop(.5, transparent), to(transparent));
+    background-image: -moz-linear-gradient(left, #08bec6 50%, transparent 50%, transparent);
+    background-image: -o-linear-gradient(left, #08bec6 50%, transparent 50%, transparent);
+    background-image: linear-gradient(left, #08bec6 50%, transparent 50%, transparent);
 }
-.drawer__inner{
-    opacity: 0.9;
-    color: #dcece4 !important;
+.drawer__inner,
+.drawer__inner strong,
+.navigation-bar__profile{
+    background-color: #ffe4ad !important;
+    color: #20455a;
+}
+.navigation-bar__profile a:hover{
+    text-decoration: underline;
+}
+.compose-form__buttons-wrapper,
+.announcements li,
+.trend-tags__sparkline.normal,
+.trend-tags__sparkline.normal svg{
+    background-color: #ebfaf8 !important;
+}
+.privacy-dropdown__value.active,
+.privacy-dropdown__value,
+.text-icon-button.active{
+    background-color: #63dbdb !important;
+}
+.navigation-bar,
+.navigation-bar__profile,
+.navigation-bar__profile strong,
+.compose__extra__header{
+    background-color: #fac578 !important;
+}
+.compose__extra,
+.compose__extra__body li,
+.compose__extra__body li a,
+.favourite-tags__icon,
+.favourite-tags__lock{
+    background-color: #ffe4ad !important;
 }
 /* ヘッダー */
 .column-header,
@@ -30,26 +59,31 @@
 .favourite-tags *,
 .trend-tags__header,
 .column-header__collapsible-inner{
-    background-color: #3e0d1d;
+    background-color: #520021;
     color: #ffffff;
 }
 /* スタートカラム */
-.column-subheading,
+.column-subheading{
+    background-color: #f77163 !important;
+    color: #520021 !important;
+}
+.getting-started__wrapper,
+.column-link,
 .getting-started__footer{
-    background-color: #a2051f !important;
-    color: #ffffff !important;
+    background-color: #ffb2c6 !important;
+    color: #520021 !important;
 }
-.column-link{
-    background-color: #b92e4e !important;
-    color: #ffffff !important;
+.getting-started.getting-started__footer{
+    background-color: #fff3ef !important;
 }
-.static-content.getting-started,
-.static-content.getting-started p,
-.static-content.getting-started p a,
-.static-content.getting-started p span,
-.static-content.getting-started p span a{
-    background-color: #ff9790 !important;
-    color: #3e0d1d !important;
+.getting-started.getting-started__footer a span{
+        color: #7b3484 !important;
+}
+.getting-started.getting-started__footer span{
+        color: #520021 !important;
+}
+.getting-started.getting-started__footer p span a{
+        color: #7b3484 !important;
 }
 /* トゥートカラム */
 .scrollable,
@@ -61,11 +95,11 @@
 .empty-column-indicator,
 .suggestion-tags__body>ul>li,
 .suggestion-tags__body>ul>li *{
-    background-color: #eff6f6 !important;
+    background-color: #f7fbff !important;
     color: #2f0016 !important;
 }
 .scrollable *:not(.fa){
-    background-color: #eff6f6;
+    background-color: #f7fbff;
     color: #2f0016;
 }
 /* ボタン */
@@ -89,10 +123,17 @@ span.ellipsis,
     text-decoration: none;
     border-radius: 4px;
     color: #ffffff;
-    background-image: -webkit-linear-gradient(#1a83ad 0%, #13d6d7 100%);
-    background-image: linear-gradient(#1a83ad 0%, #13d6d7 100%);
+    background-image: -webkit-linear-gradient(#0086c6 0%, #08c3c6 100%);
+    background-image: linear-gradient(#0086c6 0%, #08c3c6 100%);
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
-    border-bottom: solid 3px #0d7888;
+    border-bottom: solid 3px #0869b5;
+}
+.button:hover{
+    color: #ffffff;
+    background-image: -webkit-linear-gradient(#ad559c 0%, #bd9ade 100%);
+    background-image: linear-gradient(#ad559c 0%, #bd9ade 100%);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+    border-bottom: solid 3px #6b3073;
 }
 .button:hover{
     color: #2a1b0a;
@@ -129,7 +170,7 @@ span.ellipsis,
 /* 角を丸くする */
 /* 全体 */
 .column .scrollable,
-.drawer__inner{
+.drawer__pager{
     border-radius: 4px;    /* CSS3草案 */  
     -webkit-border-radius: 4px;    /* Safari,Google Chrome用 */  
     -moz-border-radius: 4px;    /* Firefox用 */
@@ -166,7 +207,8 @@ span.ellipsis,
     -moz-border-radius: 0 0 4px 0;    /* Firefox用 */
 }
 /* スタートカラム */
-.getting-started__wrapper{
+.getting-started__wrapper,
+.column-subheading{
     border-radius: 4px;    /* CSS3草案 */  
     -webkit-border-radius: 4px;    /* Safari,Google Chrome用 */  
     -moz-border-radius: 4px;    /* Firefox用 */
@@ -181,23 +223,38 @@ span.ellipsis,
 /* 全体 */
 ::-webkit-scrollbar,
 ::-webkit-scrollbar-track-piece{
-    background: #dcece4;
+    background: #fff3ef;
     border-radius: 4px;
     width: 8px;
     -webkit-border-radius: 4px;
 }
 ::-webkit-scrollbar:hover,
 ::-webkit-scrollbar-track-piece:hover{
-    background: #fff28a;
+    background: #fff39c;
 }
 ::-webkit-scrollbar-thumb,
 ::-webkit-scrollbar-thumb:hover{
-    background: #c49be4;
+    background: #ffb2b5;
 }
 ::-webkit-scrollbar-thumb,
 ::-webkit-scrollbar-track{
     border-radius: 4px;
     -webkit-border-radius: 4px;
+}
+.compose__extra .scrollable.optionally-scrollable::-webkit-scrollbar,
+.compose__extra .scrollable.optionally-scrollable::-webkit-scrollbar-track-piece{
+    background: #ffe4ad;
+    border-radius: 4px;
+    width: 8px;
+    -webkit-border-radius: 4px;
+}
+.compose__extra .scrollable.optionally-scrollable::-webkit-scrollbar:hover,
+.compose__extra .scrollable.optionally-scrollable::-webkit-scrollbar-track-piece:hover{
+    background: #ffe4ad;
+}
+.compose__extra .scrollable.optionally-scrollable::-webkit-scrollbar-thumb,
+.compose__extra .scrollable.optionally-scrollable::-webkit-scrollbar-thumb:hover{
+    background: #916d4a;
 }
 /* ヘッダー */
 .column-header__collapsible::-webkit-scrollbar,
@@ -240,17 +297,17 @@ span.ellipsis,
 }    /* スクロールバーを常時表示したくない場合はこの行全体を削除またはコメントアウトしてください */
 .drawer__pager .drawer__inner::-webkit-scrollbar,
 .drawer__pager .drawer__inner::-webkit-scrollbar-track-piece{
-    background: #444b5d;
+    background: #fac578;
     border-radius: 4px;
     -webkit-border-radius: 4px;
 }
 .drawer__pager .drawer__inner::-webkit-scrollbar:hover,
 .drawer__pager .drawer__inner::-webkit-scrollbar-track-piece:hover{
-    background: #444b5d;
+    background: #fac578;
 }
 .drawer__pager .drawer__inner::-webkit-scrollbar-thumb,
 .drawer__pager .drawer__inner::-webkit-scrollbar-thumb:hover{
-    background: #313543;
+    background: #794a2f;
 }
 /* .compose__extra .scrollable.optionally-scrollable{ */
 /*     overflow: hidden; */
